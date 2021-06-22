@@ -7,17 +7,37 @@ using WeatherSiberianData.Model;
 using WeatherSiberianData.DBContext;
 using System.ComponentModel.DataAnnotations;
 using WeatherSiberianData.Repository;
+using Microsoft.Extensions.Logging;
 
 namespace WeatherSiberianData.Controllers
 {
-    [Route("api/[controller]/[action]")]
     [ApiController]
-    public class DataController : Controller
+    [Route("[controller]")]
+    //[Route("api/[controller]/[action]")]
+    
+    public class DataController : ControllerBase
     {
         private IWeatherRepository _repository;
         public DataController()
         {
             _repository = new WeatherRepository(WeatherContext.GetInstance());
+        }
+        private readonly ILogger<DataController> _logger;
+        public DataController(ILogger<DataController> logger)
+        {
+            _logger = logger;
+        }
+        [HttpGet]
+        public IEnumerable<DataModel> Get()
+        {
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new DataModel
+            {
+                ID = "12334",
+                Type = "1",
+                Value = "2"
+            })
+            .ToArray();
         }
     }
 }
