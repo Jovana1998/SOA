@@ -84,7 +84,6 @@ D:\SOA\Projekat\WeatherProject\WeatherSiberianData\bin\Debug\net5.0\runtimes\win
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
-D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.csprojAssemblyReference.cache
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.GeneratedMSBuildEditorConfig.editorconfig
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.AssemblyInfoInputs.cache
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.AssemblyInfo.cs

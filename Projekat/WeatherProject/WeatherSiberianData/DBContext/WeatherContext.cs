@@ -30,14 +30,22 @@ namespace WeatherSiberianData.DBContext
         }
         private static IMongoDatabase CreateDB()
         {
-            string connectionString = string.Empty;
-            using (var sr = new StreamReader("mongodb+srv://Jovana:vidosava98@cluster0.4ukyt.mongodb.net/Cluster0?retryWrites=true&w=majority"))
-            {
-                connectionString = sr.ReadToEnd(); 
-            }
-            var client = new MongoClient(connectionString);
-            var db=client.GetDatabase("SOA");
-            return db;
+            //string connectionString = string.Empty;
+            //using (var sr = new StreamReader("mongodb+srv://vida:sifra3000@cluster0.hhqm6.mongodb.net/Cluster0?retryWrites=true&w=majority"))
+            //{
+            //    ///*mongodb+srv://Jovana:vidosava98@cluster0.4ukyt.mongodb.net/Cluster0?retryWrites=true&w=majority*/
+            //    connectionString = sr.ReadToEnd(); 
+            //}
+            //var client = new MongoClient(connectionString);
+            //var db=client.GetDatabase("SOA");
+            //return db;
+
+
+
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://vida:sifra3000@cluster0.hhqm6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            var client = new MongoClient(settings);
+            var database = client.GetDatabase("WeatherSiberianData");
+            return database;
         }
     }
 }

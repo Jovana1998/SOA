@@ -9,5 +9,6 @@ namespace WeatherSiberianData.Repository
     interface IWeatherRepository
     {
         Task AddDataAsync(DataModel dm);
+        Task<IList<DataModel>> GetAllDataAsync();
     }
 }

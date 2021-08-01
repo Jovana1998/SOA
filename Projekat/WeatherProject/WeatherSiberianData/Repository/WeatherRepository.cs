@@ -21,5 +21,10 @@ namespace WeatherSiberianData.Repository
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             await coll.InsertOneAsync(dm);
         }
+        public async Task<IList<DataModel>> GetAllDataAsync()
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => true).ToListAsync();
+        }
     }
 }
