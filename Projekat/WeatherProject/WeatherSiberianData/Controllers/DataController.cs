@@ -49,6 +49,21 @@ namespace WeatherSiberianData.Controllers
             //await _repository.GetDataAsync(id);
             return Ok(await _repository.GetDataAsync(id));// kad je unutar to znaci da se stampa na ekran
         }
+        [HttpGet]
+        public async  Task<IActionResult> GetAllDataType([Required] string type)
+        {
+            if(type==null)
+            { return BadRequest(); }
+            return Ok(await _repository.GetAllDataTypeAsync(type));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllDataValue([Required] string value)
+        {
+            if (value == null)
+            { return BadRequest(); }
+            return Ok(await _repository.GetAllDataValueAsync(value));
+        }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveData()
@@ -69,13 +84,24 @@ namespace WeatherSiberianData.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> ModifyData([Required, FromBody] DataModel dm)
+        public async Task<IActionResult> ModifyData([/*Required,*/ FromBody] DataModel dm)//ako stavim required znaci da je polje obaveyno
         {
             if (dm == null)
             {
                 return BadRequest();
             }
             await _repository.ModifyDataAsync(dm);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> ModifyDataValue([Required] string id, string value)
+        {
+            if (id == null || value == null)
+            {
+                return BadRequest();
+            }
+            await _repository.ModifyDataValueAsync(id,value);
             return Ok();
         }
     }

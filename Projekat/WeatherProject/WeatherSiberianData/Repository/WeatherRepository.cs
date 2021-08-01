@@ -32,6 +32,19 @@ namespace WeatherSiberianData.Repository
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             return await coll.Find(x => x.ID == id).ToListAsync();
         }
+
+        public async Task<IList<DataModel>> GetAllDataTypeAsync(string type)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => x.Type == type).ToListAsync();
+
+        }
+        public async Task<IList<DataModel>> GetAllDataValueAsync(string value)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => x.Value == value).ToListAsync();
+
+        }
         public async Task RemoveDataAsync()
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
@@ -47,6 +60,17 @@ namespace WeatherSiberianData.Repository
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             await coll.ReplaceOneAsync(x => x.ID == dm.ID, dm);
+        }
+
+        public async Task ModifyDataValueAsync(string id, string value)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            DataModel dm = new DataModel();
+            dm.Value = value;
+            dm.RecordTime = null;
+            dm.ID = id;
+            dm.Type = null;
+            await coll.ReplaceOneAsync(x => x.ID == id, dm);
         }
     }
 }
