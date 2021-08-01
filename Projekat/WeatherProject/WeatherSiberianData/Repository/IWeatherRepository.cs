@@ -10,5 +10,10 @@ namespace WeatherSiberianData.Repository
     {
         Task AddDataAsync(DataModel dm);
         Task<IList<DataModel>> GetAllDataAsync();
+
+        Task<IList<DataModel>> GetDataAsync(string id);
+        Task RemoveDataAsync();
+        Task RemoveOneDataAsync(string id);
+        Task ModifyDataAsync(DataModel dm);
     }
 }

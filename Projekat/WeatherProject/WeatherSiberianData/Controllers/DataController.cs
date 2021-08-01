@@ -12,8 +12,8 @@ using Microsoft.Extensions.Logging;
 namespace WeatherSiberianData.Controllers
 {
     
-    [Route("[controller]")]
-    //[Route("api/[controller]/[action]")]
+    //[Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class DataController : ControllerBase
     {
@@ -22,23 +22,6 @@ namespace WeatherSiberianData.Controllers
         {
             _repository = new WeatherRepository(WeatherContext.GetInstance());
         }
-        //private readonly ILogger<DataController> _logger;
-        //public DataController(ILogger<DataController> logger)
-        //{
-        //    _logger = logger;
-        //}
-        //[HttpGet]
-        //public IEnumerable<DataModel> Get()
-        //{
-        //    var rng = new Random();
-        //    return Enumerable.Range(1, 5).Select(index => new DataModel
-        //    {
-        //        ID = "5553a998e4b02cf7151190b8",
-        //        Type = "1",
-        //        Value = "2"
-        //    })
-        //    .ToArray();
-        //}
         [HttpPost]
         public async Task<IActionResult> AddSensorData([FromBody, Required] DataModel sensorDataModel)
         {
@@ -54,6 +37,46 @@ namespace WeatherSiberianData.Controllers
         public async Task<IActionResult> GetAllData()
         {
             return Ok(await _repository.GetAllDataAsync());
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetData([Required] string id)
+        {
+            if(id== null)
+            {
+                return BadRequest();
+            }
+            //await _repository.GetDataAsync(id);
+            return Ok(await _repository.GetDataAsync(id));// kad je unutar to znaci da se stampa na ekran
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> RemoveData()
+        {
+            await _repository.RemoveDataAsync();
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> RemoveOneData([Required] string id)
+        {
+            if (id == null)
+            {
+                return BadRequest();
+            }
+            await _repository.RemoveOneDataAsync(id);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> ModifyData([Required, FromBody] DataModel dm)
+        {
+            if (dm == null)
+            {
+                return BadRequest();
+            }
+            await _repository.ModifyDataAsync(dm);
+            return Ok();
         }
     }
 }

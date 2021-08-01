@@ -107,3 +107,4 @@ D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiber
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\ref\WeatherSiberianData.dll
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.pdb
 D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.genruntimeconfig.cache
+D:\SOA\Projekat\WeatherProject\WeatherSiberianData\obj\Debug\net5.0\WeatherSiberianData.csprojAssemblyReference.cache

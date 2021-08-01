@@ -25,6 +25,28 @@ namespace WeatherSiberianData.Repository
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             return await coll.Find(x => true).ToListAsync();
+
+        }
+        public async Task<IList<DataModel>> GetDataAsync(string id)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => x.ID == id).ToListAsync();
+        }
+        public async Task RemoveDataAsync()
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            string st = "5ca4bbcea2dd94ee58162a65";
+            await coll.DeleteOneAsync(x => x.ID ==st);
+        }
+        public async Task RemoveOneDataAsync(string id)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            await coll.DeleteManyAsync(x => x.ID == id);
+        }
+        public async Task ModifyDataAsync(DataModel dm)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            await coll.ReplaceOneAsync(x => x.ID == dm.ID, dm);
         }
     }
 }
