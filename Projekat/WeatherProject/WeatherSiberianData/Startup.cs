@@ -41,28 +41,7 @@ namespace WeatherSiberianData
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherSiberianData", Version = "v1" });
             });
-            //services.AddSwaggerDocument(config =>
-            //{
-            //    config.PostProcess = document =>
-            //    {
-            //        document.Info.Version = "V1";
-            //        document.Info.Title = "Weather API";
-            //        document.Info.Description = "Simple api for weather in Australia";
-            //        document.Info.TermsOfService = "None";
-            //        document.Info.Contact = new NSwag.OpenApiContact
-            //        {
-            //            Name = "Nikola Begovic and David Bosnic",
-            //            Email = "begota98@gmail.com and davidbosnic98@gmail.com",
-            //            Url = string.Empty
-            //        };
-            //        document.Info.License = new NSwag.OpenApiLicense
-            //        {
-            //            Name = "Under LICX",
-            //            Url = "https://example.com/license"
-            //        };
-            //        document.Schemes.Add(NSwag.OpenApiSchema.Http);
-            //    };
-            //});
+          
 
 
         }
