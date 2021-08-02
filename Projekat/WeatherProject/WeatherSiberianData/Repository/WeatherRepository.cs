@@ -65,12 +65,10 @@ namespace WeatherSiberianData.Repository
         public async Task ModifyDataValueAsync(string id, string value)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
-            DataModel dm = new DataModel();
-            dm.Value = value;
-            dm.RecordTime = null;
-            dm.ID = id;
-            dm.Type = null;
-            await coll.ReplaceOneAsync(x => x.ID == id, dm);
+            var a =  await coll.Find(x => x.ID == id).ToListAsync();
+            DataModel b = a.First();
+            b.Value = value;
+            await coll.ReplaceOneAsync(x => x.ID == id, b);
         }
     }
 }
