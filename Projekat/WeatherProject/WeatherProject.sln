@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherSiberianData", "WeatherSiberianData\WeatherSiberianData.csproj", "{91133E79-FBBC-4ECD-8F2A-11342FC4D9EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherSiberianSensor", "WeatherSiberianSensor\WeatherSiberianSensor.csproj", "{98BE2603-E1C9-4FEE-8144-07AD5E01314B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherSiberianSensor", "WeatherSiberianSensor\WeatherSiberianSensor.csproj", "{98BE2603-E1C9-4FEE-8144-07AD5E01314B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DBD490ED-8684-488D-9351-9948410A9354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{98BE2603-E1C9-4FEE-8144-07AD5E01314B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98BE2603-E1C9-4FEE-8144-07AD5E01314B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98BE2603-E1C9-4FEE-8144-07AD5E01314B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD490ED-8684-488D-9351-9948410A9354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD490ED-8684-488D-9351-9948410A9354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD490ED-8684-488D-9351-9948410A9354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD490ED-8684-488D-9351-9948410A9354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
