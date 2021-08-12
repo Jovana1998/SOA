@@ -30,6 +30,12 @@ namespace WeatherSiberianData.DBContext
         }
         private static IMongoDatabase CreateDB()
         {
+            //var settings = MongoClientSettings.FromConnectionString("mongodb+srv://vida:sifra3000@cluster0.hhqm6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            //var client = new MongoClient(settings);
+            //var database = client.GetDatabase("WeatherSiberianData");
+            //return database;
+
+
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://vida:sifra3000@cluster0.hhqm6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
             var client = new MongoClient(settings);
             var database = client.GetDatabase("WeatherSiberianData");
