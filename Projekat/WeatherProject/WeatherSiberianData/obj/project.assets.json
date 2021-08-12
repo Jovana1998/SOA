@@ -1234,19 +1234,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arsic\\.nuget\\packages\\": {}
+    "C:\\Users\\Jovana\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
+      "projectUniqueName": "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
       "projectName": "WeatherSiberianData",
-      "projectPath": "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
-      "packagesPath": "C:\\Users\\arsic\\.nuget\\packages\\",
-      "outputPath": "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\obj\\",
+      "projectPath": "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
+      "packagesPath": "C:\\Users\\Jovana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\arsic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jovana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1307,7 +1312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

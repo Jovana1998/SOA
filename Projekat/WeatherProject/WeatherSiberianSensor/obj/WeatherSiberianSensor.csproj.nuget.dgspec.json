@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj": {}
+    "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj": {}
   },
   "projects": {
-    "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj": {
+    "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
+        "projectUniqueName": "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
         "projectName": "WeatherSiberianSensor",
-        "projectPath": "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
-        "packagesPath": "C:\\Users\\arsic\\.nuget\\packages\\",
-        "outputPath": "D:\\8.8.21\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\obj\\",
+        "projectPath": "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
+        "packagesPath": "C:\\Users\\Jovana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jovana\\Desktop\\GIT\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\arsic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jovana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

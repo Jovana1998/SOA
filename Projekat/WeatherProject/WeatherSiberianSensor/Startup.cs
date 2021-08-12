@@ -24,7 +24,7 @@ namespace WeatherSiberianSensor
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+            services.AddControllersWithViews();
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
@@ -39,7 +39,7 @@ namespace WeatherSiberianSensor
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherSiberianDevice", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherSiberianData", Version = "v1" });
             });
         }
 
@@ -50,7 +50,7 @@ namespace WeatherSiberianSensor
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeatherSiberianDevice v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeatherSiberianData v1"));
 
             }
             else
