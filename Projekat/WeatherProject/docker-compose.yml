@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  weathersiberiandata:
+    image: ${DOCKER_REGISTRY-}weathersiberiandata
+    build:
+      context: .
+      dockerfile: WeatherSiberianData/Dockerfile
+
+  weathersiberiansensor:
+    image: ${DOCKER_REGISTRY-}weathersiberiansensor
+    build:
+      context: .
+      dockerfile: WeatherSiberianSensor/Dockerfile
+
