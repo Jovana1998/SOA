@@ -1,7 +1,7 @@
 services:
   weathersiberiandata:
     build:
-      context: C:\Users\Jovana\Desktop\GIT\SOA\Projekat\WeatherProject
+      context: D:\PROJEKAT SOA\SOA\Projekat\WeatherProject
       dockerfile: WeatherSiberianData/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -10,7 +10,7 @@ services:
     - target: 80
   weathersiberiansensor:
     build:
-      context: C:\Users\Jovana\Desktop\GIT\SOA\Projekat\WeatherProject
+      context: D:\PROJEKAT SOA\SOA\Projekat\WeatherProject
       dockerfile: WeatherSiberianSensor/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -20,6 +20,6 @@ services:
     - target: 80
     - target: 443
     volumes:
-    - /c/Users/Jovana/AppData/Roaming/ASP.NET/Https:/root/.aspnet/https:ro
-    - /c/Users/Jovana/AppData/Roaming/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\arsic\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\arsic\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
 version: '3.4'

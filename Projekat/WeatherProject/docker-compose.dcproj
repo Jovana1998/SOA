@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>dbd490ed-8684-488d-9351-9948410a9354</ProjectGuid>
+    <ProjectGuid>3d41d249-7346-4da8-b80d-2a5c8355f65e</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>weathersiberiandata</DockerServiceName>
+    <DockerServiceName>weathersiberiansensor</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

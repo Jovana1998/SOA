@@ -1239,11 +1239,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
+      "projectUniqueName": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
       "projectName": "WeatherSiberianSensor",
-      "projectPath": "D:\\SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
+      "projectPath": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\WeatherSiberianSensor.csproj",
       "packagesPath": "C:\\Users\\arsic\\.nuget\\packages\\",
-      "outputPath": "D:\\SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\obj\\",
+      "outputPath": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianSensor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\arsic\\AppData\\Roaming\\NuGet\\NuGet.Config",

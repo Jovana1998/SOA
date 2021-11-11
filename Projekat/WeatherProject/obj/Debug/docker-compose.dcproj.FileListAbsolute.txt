@@ -1,0 +1,87 @@
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.Views.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.Views.pdb
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\appsettings.Development.json
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\appsettings.json
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.exe
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.Views.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.Views.pdb
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.exe
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Driver.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Bson.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.OpenApi.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Driver.Core.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Libmongocrypt.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\DnsClient.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\SharpCompress.dll
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.pdb
+D:\8.8.21\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.pdb
+D:\8.8.21\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+D:\8.8.21\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\8.8.21\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\SOA\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\appsettings.Development.json
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\appsettings.json
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.Views.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.Views.pdb
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.exe
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.Views.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.Views.pdb
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.exe
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Driver.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Bson.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.OpenApi.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Driver.Core.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Libmongocrypt.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\DnsClient.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\SharpCompress.dll
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.pdb
+D:\SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.pdb
+D:\SOA\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+D:\SOA\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\appsettings.Development.json
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\appsettings.json
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.Views.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.Views.pdb
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.exe
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.Views.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.Views.pdb
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.exe
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Driver.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Bson.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.OpenApi.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Driver.Core.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\MongoDB.Libmongocrypt.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\DnsClient.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\SharpCompress.dll
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianData.pdb
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\bin\Debug\WeatherSiberianSensor.pdb
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+D:\PROJEKAT SOA\SOA\Projekat\WeatherProject\obj\Debug\docker-compose.dcproj.CopyComplete
