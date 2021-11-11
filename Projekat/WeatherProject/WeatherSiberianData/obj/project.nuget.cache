@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ei4fCKyhkUBCsuyQQ9zn5ndwQ4SIxeRX/ygi070FFhJ68T2N3ICbmOnSL/OLWAshK6+GIRLLk8ylG/uZbgmHCA==",
+  "dgSpecHash": "YVFooWRB+13Gk5QcaO9Knh3YCfE/YxOczsfTbiPXN+Fz4PvIhm9R3DiKacY2iSnQN311BxPr6ChmHD7YSL1bEg==",
   "success": true,
-  "projectFilePath": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
+  "projectFilePath": "C:\\Users\\arsic\\OneDrive\\Desktop\\Projekat Jovana\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arsic\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\arsic\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.7\\microsoft.entityframeworkcore.5.0.7.nupkg.sha512",

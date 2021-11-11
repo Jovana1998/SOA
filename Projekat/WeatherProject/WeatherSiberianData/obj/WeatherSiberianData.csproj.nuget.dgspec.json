@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj": {}
+    "C:\\Users\\arsic\\OneDrive\\Desktop\\Projekat Jovana\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj": {}
   },
   "projects": {
-    "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj": {
+    "C:\\Users\\arsic\\OneDrive\\Desktop\\Projekat Jovana\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
+        "projectUniqueName": "C:\\Users\\arsic\\OneDrive\\Desktop\\Projekat Jovana\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
         "projectName": "WeatherSiberianData",
-        "projectPath": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
+        "projectPath": "C:\\Users\\arsic\\OneDrive\\Desktop\\Projekat Jovana\\Projekat\\WeatherProject\\WeatherSiberianData\\WeatherSiberianData.csproj",
         "packagesPath": "C:\\Users\\arsic\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJEKAT SOA\\SOA\\Projekat\\WeatherProject\\WeatherSiberianData\\obj\\",
+        "outputPath": "C:\\Users\\arsic\\OneDrive\\Desktop\\Projekat Jovana\\Projekat\\WeatherProject\\WeatherSiberianData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arsic\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -6,7 +6,7 @@
     <ProjectGuid>3d41d249-7346-4da8-b80d-2a5c8355f65e</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>weathersiberiansensor</DockerServiceName>
+    <DockerServiceName>weathersiberiandata</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
