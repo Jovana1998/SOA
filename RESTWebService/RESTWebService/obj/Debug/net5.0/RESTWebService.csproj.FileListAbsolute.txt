@@ -19,7 +19,6 @@ D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\Swashbuckle.AspNe
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.csprojAssemblyReference.cache
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.GeneratedMSBuildEditorConfig.editorconfig
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.AssemblyInfoInputs.cache
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.AssemblyInfo.cs
@@ -35,3 +34,19 @@ D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.dl
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\ref\RESTWebService.dll
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.pdb
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.genruntimeconfig.cache
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\DnsClient.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\MongoDB.Bson.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\MongoDB.Driver.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\SharpCompress.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
