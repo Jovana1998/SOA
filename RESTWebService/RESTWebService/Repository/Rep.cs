@@ -21,5 +21,27 @@ namespace RESTWebService.Repository
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             await coll.InsertOneAsync(dm);
         }
+        public async Task<IList<DataModel>> GetAllDataAsync()
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => true).ToListAsync();
+
+        }
+        public async Task<DataModel> GetDataByIdAsync(string id)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => x.ID == id).FirstOrDefaultAsync();
+        }
+        public async Task<DataModel> GetDataByValueAsync(string value)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => x.Value == value).FirstOrDefaultAsync();
+        }
+        public async Task<DataModel> GetDataByTypeAsync(string type)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            return await coll.Find(x => x.Type == type).FirstOrDefaultAsync();
+        }
+
     }
 }

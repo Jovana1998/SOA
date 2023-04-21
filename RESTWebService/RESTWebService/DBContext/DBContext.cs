@@ -31,7 +31,7 @@ namespace RESTWebService.DBContext
 
             var settings = MongoClientSettings.FromConnectionString("mongodb://soa:soa12345@cluster0-shard-00-00.xnw0z.mongodb.net:27017,cluster0-shard-00-01.xnw0z.mongodb.net:27017,cluster0-shard-00-02.xnw0z.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-qmzfdd-shard-0&authSource=admin&retryWrites=true&w=majority");
             var client = new MongoClient(settings);
-            var database = client.GetDatabase("test");
+            var database = client.GetDatabase("soa-2023");
             return database;
 
         }

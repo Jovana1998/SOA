@@ -24,15 +24,36 @@ namespace RESTWebService.Controllers
             _repository = new Rep(DBContext.DBContext.GetInstance());
         }
         [HttpPost]
-        public async Task<IActionResult> AddData([FromBody, Required] DataModel sensorDataModel)
+        public async Task<IActionResult> AddData([FromBody, Required] DataModel dataModel)
         {
 
-            if (sensorDataModel == null)
+            if (dataModel == null)
             {
                 return BadRequest();
             }
-            await _repository.AddDataAsync(sensorDataModel);
+            await _repository.AddDataAsync(dataModel);
             return Ok();
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAllData()
+        {
+            return Ok(await _repository.GetAllDataAsync());
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetDataById([Required] string id)
+        {
+            return Ok(await _repository.GetDataByIdAsync(id));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetDataByValue([Required] string value)
+        {
+            //provera za value
+            return Ok(await _repository.GetDataByValueAsync(value));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetDataByType([Required] string type)
+        {
+            return Ok(await _repository.GetDataByTypeAsync(type));
         }
     }
 }
