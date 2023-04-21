@@ -14,7 +14,7 @@ using GraphQLService.Service;
 using GraphQLService.Models;
 using HotChocolate;
 using HotChocolate.AspNetCore.Playground;
-
+using MongoDB.Driver;
 namespace GraphQLService
 {
     public class Startup

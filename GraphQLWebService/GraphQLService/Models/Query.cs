@@ -1,4 +1,5 @@
 ﻿using GraphQLService.IService;
+using GraphQLService.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
