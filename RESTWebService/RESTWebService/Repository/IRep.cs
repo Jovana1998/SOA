@@ -13,5 +13,10 @@ namespace RESTWebService.Repository
         Task<DataModel> GetDataByIdAsync(string id);
         Task<DataModel> GetDataByValueAsync(string value);
         Task<DataModel> GetDataByTypeAsync(string type);
+        Task RemoveDataAsync();
+        Task RemoveDataByIdAsync(string id);
+        Task RemoveDataByValueAsync(string value);
+        Task ModifyDataAsync(DataModel dm);
+        Task ModifyDataByIdAsync(string id, string value);
     }
 }
