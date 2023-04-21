@@ -39,3 +39,6 @@ D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\obj\Debug\netcoreapp3.1\GraphQL
 D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\obj\Debug\netcoreapp3.1\GraphQLService.dll
 D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\obj\Debug\netcoreapp3.1\GraphQLService.pdb
 D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\obj\Debug\netcoreapp3.1\GraphQLService.genruntimeconfig.cache
+D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\HotChocolate.AspNetCore.Abstractions.dll
+D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\HotChocolate.AspNetCore.Playground.dll
+D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\HotChocolate.Server.dll

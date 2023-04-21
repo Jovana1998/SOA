@@ -43,6 +43,10 @@
             "HotChocolate.AspNetCore": {
               "target": "Package",
               "version": "[11.0.7, )"
+            },
+            "HotChocolate.AspNetCore.Playground": {
+              "target": "Package",
+              "version": "[10.5.5, )"
             }
           },
           "imports": [

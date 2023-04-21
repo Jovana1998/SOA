@@ -13,6 +13,7 @@ using GraphQLService.IService;
 using GraphQLService.Service;
 using GraphQLService.Models;
 using HotChocolate;
+using HotChocolate.AspNetCore.Playground;
 
 namespace GraphQLService
 {
@@ -37,7 +38,7 @@ namespace GraphQLService
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UsePlayground( new PlaygroundOptions {QueryPath = "/api",PathString = "/playground"});
+                app.UsePlayground(new PlaygroundOptions {QueryPath = "/api", Path = "/playground"});
             }
 
             app.UseGraphQL("/api");
