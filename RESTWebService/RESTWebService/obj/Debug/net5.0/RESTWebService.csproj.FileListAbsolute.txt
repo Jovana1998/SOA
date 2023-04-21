@@ -50,3 +50,4 @@ D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\win\nati
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 D:\SOA-2023\SOA\RESTWebService\RESTWebService\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+D:\SOA-2023\SOA\RESTWebService\RESTWebService\obj\Debug\net5.0\RESTWebService.csprojAssemblyReference.cache

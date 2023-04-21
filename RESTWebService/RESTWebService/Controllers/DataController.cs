@@ -12,8 +12,6 @@ using Microsoft.Extensions.Logging;
 
 namespace RESTWebService.Controllers
 {
-
-    //[Route("[controller]")]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class DataController : ControllerBase
