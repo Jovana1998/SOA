@@ -16,5 +16,7 @@ namespace GraphQLService.Models
         }
 
         public List<TempModel> TempModels => _temperatureService.GetAllData();
+
+        public TempModel TempModel => _temperatureService.GetDataById("6445743c1ea9933fcc9fb205");
     }
 }

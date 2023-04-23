@@ -20,17 +20,14 @@ namespace GraphQLService.Service
             var coll = _dbContext.GetCollection<TempModel>("DATA");
             List<TempModel> listData = new List<TempModel>();
             listData =  coll.Find(x => true).ToList();
-            //for(int i = 0; i<9;i++)
-            //{
-            //    listData.Add(new TempModel()
-            //    {
-            //        id = "644283c8fd7ef303b8e99bf1",
-            //        value ="12",
-            //        recordTime = "10/01/2022",
-            //        type = "temp"
-            //    });
-            //}
             return listData;
+        }
+        public TempModel GetDataById(string id)
+        {
+            var coll = _dbContext.GetCollection<TempModel>("DATA");
+            TempModel data = new TempModel();
+            data = coll.Find(x => x.Id == id).FirstOrDefault();
+            return data;
         }
     }
 }

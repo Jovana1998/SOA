@@ -9,5 +9,6 @@ namespace GraphQLService.IService
     public interface ITemperatureService
     {
       public List<TempModel> GetAllData();
+      public TempModel GetDataById(string id);
     }
 }

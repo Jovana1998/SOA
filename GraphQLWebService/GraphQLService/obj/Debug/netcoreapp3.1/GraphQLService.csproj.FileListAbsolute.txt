@@ -68,4 +68,3 @@ D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\runtime
 D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\runtimes\linux\native\libmongocrypt.so
 D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\runtimes\osx\native\libmongocrypt.dylib
 D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
-D:\SOA-2023\SOA\GraphQLWebService\GraphQLService\obj\Debug\netcoreapp3.1\GraphQLService.csprojAssemblyReference.cache
