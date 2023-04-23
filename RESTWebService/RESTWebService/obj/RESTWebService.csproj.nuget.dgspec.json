@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {}
+    "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {}
   },
   "projects": {
-    "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {
+    "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
+        "projectUniqueName": "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
         "projectName": "RESTWebService",
-        "projectPath": "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
-        "packagesPath": "C:\\Users\\arsic\\.nuget\\packages\\",
-        "outputPath": "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\obj\\",
+        "projectPath": "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
+        "packagesPath": "C:\\Users\\korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\RESTWebService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\arsic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -89,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
