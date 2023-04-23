@@ -716,19 +716,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\korisnik\\.nuget\\packages\\": {}
+    "C:\\Users\\jovana.jovic\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\GrpcService\\GrpcService.csproj",
+      "projectUniqueName": "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\GrpcService\\GrpcService.csproj",
       "projectName": "GrpcService",
-      "projectPath": "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\GrpcService\\GrpcService.csproj",
-      "packagesPath": "C:\\Users\\korisnik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\korisnik\\Desktop\\soa\\SOA\\RESTWebService\\GrpcService\\obj\\",
+      "projectPath": "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\GrpcService\\GrpcService.csproj",
+      "packagesPath": "C:\\Users\\jovana.jovic\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\GrpcService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jovana.jovic\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -778,7 +782,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
