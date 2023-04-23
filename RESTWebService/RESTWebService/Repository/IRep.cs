@@ -11,12 +11,11 @@ namespace RESTWebService.Repository
         Task AddDataAsync(DataModel dm);
         Task<IList<DataModel>> GetAllDataAsync();
         Task<DataModel> GetDataByIdAsync(string id);
-        Task<DataModel> GetDataByValueAsync(string value);
-        Task<DataModel> GetDataByTypeAsync(string type);
-        Task RemoveDataAsync();
+        Task<IList<DataModel>> GetDataByTempValueAsync(string value);
+        Task<IList<DataModel>> GetDataByHumidityAsync(string humidity);
         Task RemoveDataByIdAsync(string id);
-        Task RemoveDataByValueAsync(string value);
         Task ModifyDataAsync(DataModel dm);
-        Task ModifyDataByIdAsync(string id, string value);
+        Task ModifyTemperatureByIdAsync(string id, string tempValue);
+        Task ModifyHumidityByIdAsync(string id, string humidityValue);
     }
 }

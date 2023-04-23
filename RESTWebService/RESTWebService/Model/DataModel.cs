@@ -12,13 +12,16 @@ namespace RESTWebService.Model
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string ID { get; set; }
-        [BsonElement("value")]
-        public string Value { get; set; }
+        [BsonElement("time_id")]
+        public string Time_id { get; set; }
 
-        [BsonElement("recordTime")]
-        public string RecordTime { get; set; }
-        [BsonElement("type")]
-        public string Type { get; set; }
-
+        [BsonElement("ping_ms")]
+        public string Ping_ms { get; set; }
+      
+        [BsonElement("temperature_c")]
+        public string Temperature_c { get; set; }
+        
+        [BsonElement("humidity_p")]
+        public string Humidity_p { get; set; }
     }
 }

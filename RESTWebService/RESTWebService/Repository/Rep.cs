@@ -15,7 +15,6 @@ namespace RESTWebService.Repository
         {
             _dbContext = db;
         }
-        //DataModel dd= new DataModel
         public async Task AddDataAsync(DataModel dm)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
@@ -32,42 +31,38 @@ namespace RESTWebService.Repository
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             return await coll.Find(x => x.ID == id).FirstOrDefaultAsync();
         }
-        public async Task<DataModel> GetDataByValueAsync(string value)
+        public async Task<IList<DataModel>> GetDataByTempValueAsync(string value)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
-            return await coll.Find(x => x.Value == value).FirstOrDefaultAsync();
+            return await coll.Find(x => x.Temperature_c == value).ToListAsync();
         }
-        public async Task<DataModel> GetDataByTypeAsync(string type)
+        public async Task<IList<DataModel>> GetDataByHumidityAsync(string humidity)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
-            return await coll.Find(x => x.Type == type).FirstOrDefaultAsync();
+            return await coll.Find(x => x.Humidity_p == humidity).ToListAsync();
         }
-        public async Task RemoveDataAsync()
-        {
-            var coll = _dbContext.GetCollection<DataModel>("DATA");
-            string id = "5ca4bbcea2dd94ee58162a65";
-            await coll.DeleteOneAsync(x => x.ID == id);
-        }
-         public async Task RemoveDataByIdAsync(string id)
+        public async Task RemoveDataByIdAsync(string id)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             await coll.DeleteOneAsync(x => x.ID == id);
-        }
-        public async Task RemoveDataByValueAsync(string value)
-        {
-            var coll = _dbContext.GetCollection<DataModel>("DATA");
-            await coll.DeleteOneAsync(x => x.Value == value);
         }
         public async Task ModifyDataAsync(DataModel dm)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             await coll.ReplaceOneAsync(x => x.ID == dm.ID, dm);
         }
-        public async Task ModifyDataByIdAsync(string id, string value)
+        public async Task ModifyTemperatureByIdAsync(string id, string tempValue)
         {
             var coll = _dbContext.GetCollection<DataModel>("DATA");
             DataModel dm = await coll.Find(x => x.ID == id).FirstOrDefaultAsync();
-            dm.Value = value;
+            dm.Temperature_c = tempValue;
+            await coll.ReplaceOneAsync(x => x.ID == id, dm);
+        }
+        public async Task ModifyHumidityByIdAsync(string id, string humidityValue)
+        {
+            var coll = _dbContext.GetCollection<DataModel>("DATA");
+            DataModel dm = await coll.Find(x => x.ID == id).FirstOrDefaultAsync();
+            dm.Humidity_p = humidityValue;
             await coll.ReplaceOneAsync(x => x.ID == id, dm);
         }
     }

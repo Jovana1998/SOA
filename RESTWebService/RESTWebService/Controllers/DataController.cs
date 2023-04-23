@@ -43,37 +43,23 @@ namespace RESTWebService.Controllers
             return Ok(await _repository.GetDataByIdAsync(id));
         }
         [HttpGet]
-        public async Task<IActionResult> GetDataByValue([Required] string value)
+        public async Task<IActionResult> GetDataByTemperature([Required] string temperature)
         {
-            //provera za value
-            return Ok(await _repository.GetDataByValueAsync(value));
+            return Ok(await _repository.GetDataByTempValueAsync(temperature));
         }
         [HttpGet]
-        public async Task<IActionResult> GetDataByType([Required] string type)
+        public async Task<IActionResult> GetDataByHumidity([Required] string humidity)
         {
-            return Ok(await _repository.GetDataByTypeAsync(type));
+            return Ok(await _repository.GetDataByHumidityAsync(humidity));
         }
-        [HttpDelete]
-        public async Task<IActionResult> RemoveData()
-        {
-            await _repository.RemoveDataAsync();
-            return Ok();
-        }
-
         [HttpDelete]
         public async Task<IActionResult> RemoveDataById([Required] string id)
         {
             await _repository.RemoveDataByIdAsync(id);
             return Ok();
         }
-        [HttpDelete]
-        public async Task<IActionResult> RemoveDataByValue([Required] string value)
-        {
-            await _repository.RemoveDataByValueAsync(value);
-            return Ok();
-        }
         [HttpPut]
-        public async Task<IActionResult> ModifyData([/*Required,*/ FromBody] DataModel dm)
+        public async Task<IActionResult> ModifyData([FromBody] DataModel dm)
         {
             if (dm == null)
             {
@@ -83,12 +69,16 @@ namespace RESTWebService.Controllers
             return Ok();
         }
         [HttpPut]
-        public async Task<IActionResult> ModifyDataById([Required] string id, [Required] string value)
+        public async Task<IActionResult> ModifyTemperatureById([Required] string id, [Required] string tempValue)
         {
-            await _repository.ModifyDataByIdAsync(id, value);
+            await _repository.ModifyTemperatureByIdAsync(id, tempValue);
             return Ok();
         }
-
-
+        [HttpPut]
+        public async Task<IActionResult> ModifyHumidityById([Required] string id, [Required] string humidityValue)
+        {
+            await _repository.ModifyHumidityByIdAsync(id, humidityValue);
+            return Ok();
+        }
     }
 }

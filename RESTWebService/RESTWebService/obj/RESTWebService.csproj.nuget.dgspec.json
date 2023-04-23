@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {}
+    "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {
+    "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
+        "projectUniqueName": "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
         "projectName": "RESTWebService",
-        "projectPath": "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
-        "packagesPath": "C:\\Users\\jovana.jovic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jovana.jovic\\Desktop\\SOA\\SOA\\RESTWebService\\RESTWebService\\obj\\",
+        "projectPath": "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\RESTWebService.csproj",
+        "packagesPath": "C:\\Users\\arsic\\.nuget\\packages\\",
+        "outputPath": "D:\\SOA-2023\\SOA\\RESTWebService\\RESTWebService\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jovana.jovic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arsic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,17 +77,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -99,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
