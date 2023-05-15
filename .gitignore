@@ -1,0 +1,22 @@
+# git ignore file
+[Oo]bj
+[Bb]in
+*.user
+*.suo
+*.[Cc]ache
+*.bak
+*.pdf
+*.ncb
+*.log 
+*.DS_Store
+[Tt]humbs.db 
+_ReSharper.*
+*.resharper
+Ankh.NoLoad
+Elmah.Errors
+*.Publish.xml
+App_Data/
+.vs/
+.idea
+*node_modules*
+package-lock.json
