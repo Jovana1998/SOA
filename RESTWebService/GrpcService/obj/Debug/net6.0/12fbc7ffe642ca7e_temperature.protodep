@@ -1,2 +1,0 @@
-obj\Debug\net6.0\Protos/Temperature.cs \
-obj\Debug\net6.0\Protos/TemperatureGrpc.cs: Protos/temperature.proto

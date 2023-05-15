@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package temperature;
+
+// The greeting service definition.
+service Temperature {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc GetAllData (GetAllDataRequest) returns (GetAllDataResponse);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message Data {
+	string ID = 1;
+	string Time_id = 2;
+	string Ping_ms = 3;
+	string Temperature_c = 4;
+	string Humidity_p = 5;
+}
+
+message GetAllDataRequest {
+}
+
+message GetAllDataResponse {
+ string aaadata = 1;
+}
