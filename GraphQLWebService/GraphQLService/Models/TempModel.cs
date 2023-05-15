@@ -11,13 +11,18 @@ namespace GraphQLService.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string id { get; set; }
-        [BsonElement("value")]
-        public string value { get; set; }
-        [BsonElement("recordTime")]
-        public string recordTime { get; set; }
-        [BsonElement("type")]
-        public string type { get; set; }
+        public string Id { get; set; }
+        [BsonElement("time_id")]
+        public string Time_id { get; set; }
+
+        [BsonElement("ping_ms")]
+        public string Ping_ms { get; set; }
+
+        [BsonElement("temperature_c")]
+        public string Temperature_c { get; set; }
+
+        [BsonElement("humidity_p")]
+        public string Humidity_p { get; set; }
 
     }
 }
