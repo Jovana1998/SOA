@@ -6,19 +6,17 @@ package temperature;
 
 // The greeting service definition.
 service Temperature {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
-  rpc GetAllData (GetAllDataRequest) returns (GetAllDataResponse);
+  rpc GetAllData (Empty) returns (GetAllDataResponse);
+  rpc GetById (GetByIdRequest) returns (GetByIdResponse);
+  rpc Create (CreateRequest) returns (CreateResponse);
+  rpc Update (UpdateRequest) returns (UpdateResponse);
+  rpc Delete (DeleteRequest) returns (DeleteResponse);
 }
 
 // The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
-}
 
-// The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+message Empty {
+
 }
 
 message Data {
@@ -29,9 +27,43 @@ message Data {
 	string Humidity_p = 5;
 }
 
-message GetAllDataRequest {
+message GetAllDataResponse {
+  repeated Data data = 1;
 }
 
-message GetAllDataResponse {
- string aaadata = 1;
+message GetByIdRequest {
+  string Id = 1;
+}
+
+message GetByIdResponse {
+  string Result = 1;
+  Data data =2;
+}
+message UpdateRequest {
+  	string ID = 1;
+	string Time_id = 2;
+	string Ping_ms = 3;
+	string Temperature_c = 4;
+	string Humidity_p = 5;
+}
+message UpdateResponse {
+  string Result = 1;
+  Data data =2;
+}
+message DeleteRequest {
+  string Id = 1;
+}
+message DeleteResponse {
+  string Response = 1;
+}
+
+message CreateRequest {
+	string Time_id = 1;
+	string Ping_ms = 2;
+	string Temperature_c = 3;
+	string Humidity_p = 4;
+}
+message CreateResponse {
+  string Result = 1;
+  Data data =2;
 }
