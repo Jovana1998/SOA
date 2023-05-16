@@ -19,10 +19,6 @@ namespace GrpcClient.Controllers
             _logger = logger;
         }
         [HttpGet]
-        public async Task<IActionResult> GetDataByTemperature()
-        {
-            return Ok();
-        }
         public async Task<IActionResult> Index()
         {
             var httpHandler = new HttpClientHandler();
