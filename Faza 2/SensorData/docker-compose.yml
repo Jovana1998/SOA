@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  sensoranalyticsservice:
+    image: ${DOCKER_REGISTRY-}App1
+    build:
+      context: .
+      dockerfile: SensorData/Dockerfile
