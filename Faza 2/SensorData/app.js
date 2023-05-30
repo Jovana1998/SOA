@@ -1,47 +1,42 @@
 
 const express = require('express');
-const mqtt = require('mqtt');
+const amqp = require("amqplib")
 const app = express();
-
-var path = require('path');
-
 const fs = require('fs');
 
 
-
-const client = mqtt.connect('mqtt://172.28.80.1:1883', {
-  clientId: "131df074d5c8",
-  clean: true
-});
-client.on('connect', () =>{
-  console.log("Connection established successfully!");
-});
-
-const topic = 'JokaVida';
-const message = 'test message';
-
-
-
-fs.readFile('./aa.txt', 'utf8', (err, data) => {
+ 
+fs.readFile('./SensorData.txt', 'utf8', (err, data) => {
   if (err) {
     console.error(err);
     return;
   }
-  console.log(data);
-  client.on('connect', () => {
-    console.log(`Is client connected: ${client.connected}`);    
-    if (client.connected === true) {
-        console.log(`message: ${message}, topic: ${topic}`); 
-        client.publish(topic, data);
-    }
-});
-  app.get('/', (req, res) => res.send(data))
+ 
+const amqpUrl = 'amqp://host.docker.internal:5673';
+(async () => {
+  const connection = await amqp.connect(amqpUrl, 'heartbeat=60');
+  const channel = await connection.createChannel();
+ 
+    console.log('Publishing');
+    const exchange = 'sensordata';
+    const queue = 'sensordata';
+    const routingKey = 'sensordata';
+    
+    await channel.assertExchange(exchange, 'direct', {durable: true});
+    await channel.assertQueue(queue, {durable: true});
+    await channel.bindQueue(queue, exchange, routingKey);
+    
+   channel.publish(exchange, routingKey, Buffer.from(JSON.stringify(data)));
+    console.log('Message published');
+})()
+.
+  // Prints "caught woops"
+  catch(error => { console.log('caught', error.message); });;
+
+
+  app.get('/', (req, res) => res.send("Sending data... /n"+data))
 });
 
-// error handling
-client.on('error',(error) => {
-  console.error(error);
-  process.exit(1);
-});
+
 app.listen(3000,() => console.log("Server ready") )
 

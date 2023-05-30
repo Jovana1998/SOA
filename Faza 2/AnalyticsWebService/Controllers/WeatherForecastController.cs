@@ -1,7 +1,16 @@
+using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Options;
 using MQTTnet;
 using MQTTnet.Client;
 using MQTTnet.Server;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using AnalyticsWebService.Services;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using System.Threading.Channels;
 
 namespace AnalyticsWebService.Controllers
 {
@@ -16,70 +25,100 @@ namespace AnalyticsWebService.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
+        private AnalyticsService _analyticsService;
+
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+           
+        }
+        [HttpPost]
+        public IActionResult CreateAnalyticsService()
+        {
+            if (_analyticsService == null)
+                _analyticsService = new AnalyticsService();
+            return Ok();
+        }
+        [HttpGet("Subscribe")]
+        public async Task<IActionResult> Subscribe()
+        {
+            return Ok();
+        }
+
+        [HttpGet("Get")]
+        public IEnumerable<WeatherForecast> Get()
+        {
             string porukaPayload = "Cao Joko";
             var mqttFactory = new MqttFactory();
 
-           
+
 
             var options = new MqttClientOptionsBuilder()
-                .WithClientId("131df074d5c8")
                 .WithCredentials(string.Empty, string.Empty)
-                .WithTcpServer("172.28.80.1", 1883)
-                //.WithCleanSession()
+                .WithTcpServer("172.27.48.1", 1883)
+                .WithCleanSession()
                 .Build();
 
             IMqttClient client = mqttFactory.CreateMqttClient();
-
-            //var conn = client.ConnectAsync(options).Result;
-
-            //var message = new MqttApplicationMessageBuilder()
-            //    .WithTopic("JokaVida")
-            //    .WithPayload(porukaPayload)
-            //    .WithQualityOfServiceLevel(MQTTnet.Protocol.MqttQualityOfServiceLevel.AtLeastOnce)
-            //    .Build();
-            //client.PublishAsync(message);
-            //client.DisconnectAsync();
-
             var topicFilter = new MqttTopicFilterBuilder()
-                .WithTopic("JokaVida")
-                .Build();
+              .WithTopic("JokaVida")
+              .Build();
             var conn1 = client.ConnectAsync(options).Result;
             var sub = client.SubscribeAsync(topicFilter);
             if (client.IsConnected)
             {
-                Console.WriteLine("Konektovano je na topik:" + sub.Result);
+                Console.WriteLine("Konektovano je na topik:" + sub);
             }
-            ///var han = client.UseApplicationMessageReceivedHandlerAsync(e => {
-            //Console.WriteLine(e)});
-            //string receiveMsg = x.ApplicationMessage.ConvertPayloadToString();
+            var a = "";
             client.ApplicationMessageReceivedAsync += e =>
             {
                 Console.WriteLine(e.ApplicationMessage.ConvertPayloadToString());
+                a = e.ApplicationMessage.ConvertPayloadToString();
                 return Task.CompletedTask;
             };
-            //client.DisconnectAsync();
-        }
-        //private Task Client_ApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs x)
-        //{
-        //    string topic = x.ApplicationMessage.Topic;
-        //    string receiveMsg = x.ApplicationMessage.ConvertPayloadToString();
-        //    //Home home = _uow.HomeRepository.Get(h => h.Name == topic);
-        //    Console.WriteLine("Uso sam" + receiveMsg);
-        //    return Task.CompletedTask;
-        //}
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
-        {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = a
             })
             .ToArray();
+        }
+        [HttpGet("Index")]
+        public void Index()
+        {
+            string porukaPayload = "Cao Joko";
+            var mqttFactory = new MqttFactory();
+           var factory = new ConnectionFactory
+            {
+                UserName = "guest",
+                Password = "guest",
+                Port = 15672,
+                HostName = "rabbitmq",
+                VirtualHost = "/",
+                DispatchConsumersAsync = false
+            };
+            var endpoints = new System.Collections.Generic.List<AmqpTcpEndpoint> {
+                      new AmqpTcpEndpoint("hostname"),
+                      new AmqpTcpEndpoint("rabbitmq")
+                };
+            var conn = factory.CreateConnection(endpoints);
+            var topic = "JokaVida";
+           var  channel = conn.CreateModel();
+            //channel.ExchangeDeclare(topic, ExchangeType.Direct);
+            channel.QueueDeclare(queue: topic,
+                             durable: false,
+                             exclusive: false,
+                             autoDelete: false,
+                             arguments: null);
+            //channel.QueueBind(topic, topic, topic, null);
+            var consumer = new EventingBasicConsumer(channel);
+            
+            channel.BasicConsume(queue: topic,
+                                 autoAck: true,
+                                 consumer: consumer);
+
+
         }
     }
 }

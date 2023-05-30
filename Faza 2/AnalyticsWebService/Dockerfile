@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["AnalyticsWebService.csproj", "."]
 RUN dotnet restore "./AnalyticsWebService.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/"
 RUN dotnet build "AnalyticsWebService.csproj" -c Release -o /app/build
 
 FROM build AS publish

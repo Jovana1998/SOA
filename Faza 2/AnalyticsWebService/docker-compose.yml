@@ -1,6 +1,11 @@
 version: '3.4'
 
 services:
+  analyticswebservice:
+    image: ${DOCKER_REGISTRY-}analyticswebservice
+    build:
+      context: .
+      dockerfile: Dockerfile
 
   rabbitmq:
     image: rabbitmq:3.8-management-alpine
@@ -13,12 +18,20 @@ services:
         - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
     networks:
         - rabbitmq_nodejs
-        
   sensordata:
     image: sensordataa
-    build:
-      context: .
-      dockerfile: SensorData/Dockerfile
+
+  ekuiper:
+    image: lfedge/ekuiper
+    container_name: ekuiper
+    depends_on:
+      - rabbitmq
+    ports:
+      - "9081:9081"
+      - "20498:20498"
+    environment:
+      - MQTT_SOURCE__DEFAULT__SERVER=tcp://localhost:5673
+
 networks:
   rabbitmq_nodejs:
     driver: bridge
