@@ -22,7 +22,7 @@ namespace AnalyticsWebService
         {
             try
             {
-                factory = new ConnectionFactory() { HostName = "host.docker.internal", Port = 5673 };
+                factory = new ConnectionFactory() { HostName = "host.docker.internal", Port = 5673, UserName ="joka", Password="joka"};
             
                 conn = factory.CreateConnection();
                 channel = conn.CreateModel();

@@ -41,7 +41,7 @@ namespace AnalyticsWebService.Services
             {
                 var data = Encoding.UTF8.GetString(arg.Body.ToArray());
                 var json = JsonConvert.DeserializeObject(data);
-                _mqtt.Publish(data, "t/AnalyticsData");
+                _mqtt.Publish(data, "amq.topic");
                 
 
             }

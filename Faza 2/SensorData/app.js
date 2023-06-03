@@ -12,7 +12,7 @@ fs.readFile('./SensorData.txt', 'utf8', (err, data) => {
     return;
   }
  
-const amqpUrl = 'amqp://host.docker.internal:5673';
+const amqpUrl = 'amqp://joka:joka@host.docker.internal:5673';
 (async () => {
   const connection = await amqp.connect(amqpUrl, 'heartbeat=60');
   const channel = await connection.createChannel();

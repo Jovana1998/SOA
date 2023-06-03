@@ -11,26 +11,42 @@ services:
     image: rabbitmq:3.8-management-alpine
     container_name: 'rabbitmq'
     ports:
+        - 1883:1883
         - 5673:5672
         - 15673:15672
+    command: "/bin/bash -c \"rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_web_mqtt rabbitmq_amqp1_0; rabbitmq-server\"" 
     volumes:
         - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
         - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=joka
+      - RABBITMQ_DEFAULT_PASS=joka
     networks:
         - rabbitmq_nodejs
   sensordata:
     image: sensordataa
 
   ekuiper:
-    image: lfedge/ekuiper
+    image: lfedge/ekuiper:1.8-alpine
     container_name: ekuiper
     depends_on:
       - rabbitmq
+    user: root
     ports:
       - "9081:9081"
       - "20498:20498"
     environment:
-      - MQTT_SOURCE__DEFAULT__SERVER=tcp://localhost:5673
+      - MQTT_SOURCE__DEFAULT__SERVER=host.docker.internal:1883
+
+  ekuiper_manager:
+    image: emqx/ekuiper-manager:1.8
+    container_name: manager
+    depends_on:
+      - ekuiper
+    ports:
+      - "9082:9082"
+    environment:
+      DEFAULT_EKUIPER_ENDPOINT: host.docker.internal:9081
 
 networks:
   rabbitmq_nodejs:
