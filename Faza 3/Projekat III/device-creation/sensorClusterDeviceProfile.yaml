@@ -1,0 +1,33 @@
+name: "SensorClusterProjectIII"
+manufacturer: "Raspberry Pi Foundation"
+model: "Raspberry Pi 3b+"
+labels:
+  - "rpi"
+description: "Sensor cluster providing metrics for temperature, humidity, ping and time"
+
+deviceResources:
+      -
+        name: temperature
+        description: "Sensor cluster temperature values"
+        properties:
+            value:
+             { type: "Int64", readWrite: "RW", minimum: "-50", maximum: "100", size: "4", LSB: "true", defaultValue: "0"}
+      -
+        name: humidity
+        description: "Sensor cluster humidity values"
+        properties:
+            value:
+             { type: "Int64", readWrite: "RW", minimum: "0", maximum: "100", size: "4", LSB: "true", defaultValue: "0"}
+      -
+        name: ping
+        description: "Sensor cluster ping detection"
+        properties:
+            value:
+             { type: "Object", readWrite: "RW", size: "4", LSB: "true", defaultValue: "0"}
+      -
+        name: time
+        description: "Sensor cluster time detection"
+        properties:
+            value:
+             { type: "Object", readWrite: "RW", size: "4", LSB: "true", defaultValue: "1/01/2000 00:00:00 AM"}
+
