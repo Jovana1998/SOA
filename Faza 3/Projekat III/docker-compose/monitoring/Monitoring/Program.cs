@@ -36,11 +36,13 @@ namespace Monitoring
 
                     string color = "";
                     if (m.Readings?.Count > 0)
-                        color = Evaluate(m.Readings[0]);
-                    if (!String.IsNullOrEmpty(color))
+                    // color = Evaluate(m.Readings[0]);
+                    //if (!String.IsNullOrEmpty(color))
+                    //{
                     {
-                        Console.Write(color + "\t");
+                        //Console.Write(color + "\t");
                         HttpClient client = new HttpClient();
+                        color = m.Readings[0].Value +" : "+ m.Readings[0].Name;
                         HttpResponseMessage rm = client.PutAsync(deviceAddress,
                                 new StringContent(JsonConvert.SerializeObject(
                                     new
@@ -51,6 +53,7 @@ namespace Monitoring
                                     "application/json")).Result;
                         Console.WriteLine(rm.Content.ReadAsStringAsync().Result);
                     }
+                    //}
 
                     return Task.CompletedTask;
                 };

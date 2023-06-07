@@ -10,7 +10,7 @@
     <center>
 
     <table>
-        <tr><td id="colorChanger" bgcolor="blue" height=300px width=300px></td></tr>
+        <tr><td id="colorChanger" bgcolor="yellow" height=300px width=300px></td></tr>
     </table>
 
     </center>
@@ -27,7 +27,10 @@
             $.getJSON(
                 $SCRIPT_ROOT+"/_ajaxAutoRefresh", 
                 function(data) {
-                document.getElementById("colorChanger").style.backgroundColor=data.color;
+                //document.getElementById("colorChanger").style.backgroundColor= data.color;
+				//document.getElementById("colorChanger").style.Text= data.color;
+				document.getElementById("colorChanger").innerHTML= data.color;
+				
                 }
             );
             setTimeout(arguments.callee, 1000);

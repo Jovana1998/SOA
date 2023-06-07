@@ -34,7 +34,7 @@ def register():
     return returnData, 201
 
 
-@app.route('/change-color', methods=['PUT'])
+@app.route('/changeVal', methods=['PUT'])
 def change_color():
     global color
     request.get_json(force=True)

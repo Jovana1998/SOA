@@ -37,7 +37,7 @@ coreCommands:
         description: "service unavailable"
         expectedValues: []
     put:
-      path: "/change-color"
+      path: "/changeVal"
       responses:
       -
         code: "201"

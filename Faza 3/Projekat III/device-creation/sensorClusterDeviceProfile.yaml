@@ -23,7 +23,7 @@ deviceResources:
         description: "Sensor cluster ping detection"
         properties:
             value:
-             { type: "Object", readWrite: "RW", size: "4", LSB: "true", defaultValue: "0"}
+             { type: "Int64", readWrite: "RW", size: "4", LSB: "true", defaultValue: "0"}
       -
         name: time
         description: "Sensor cluster time detection"
