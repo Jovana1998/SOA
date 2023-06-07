@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, make_response, jsonify
 from flask_restful import reqparse
 
 app = Flask(__name__)
-color = "green"
+value = "green"
 
 
 @app.route('/')
@@ -14,7 +14,7 @@ def index():
 
 @app.route('/_ajaxAutoRefresh', methods= ['GET'])
 def stuff():
-    return jsonify(color=color)
+    return jsonify(value=value)
 
 
 @app.route('/register', methods=['POST'])
@@ -35,29 +35,29 @@ def register():
 
 
 @app.route('/changeVal', methods=['PUT'])
-def change_color():
-    global color
+def change_value():
+    global value
     request.get_json(force=True)
 
     parser = reqparse.RequestParser()
-    parser.add_argument('color', required=True)
+    parser.add_argument('value', required=True)
     args = parser.parse_args()
 
-    color = (args['color'])
+    value = (args['value'])
     
-    print("Changing color to", color)
+    print("Changing value to", value)
     
     returnData = "Command accepted"
 
     return returnData, 201
     
-@app.route('/read-color', methods=['GET'])
-def read_color():
-    global color
+@app.route('/read-value', methods=['GET'])
+def read_value():
+    global value
     
-    print("Reading color")
+    print("Reading value")
     
-    returnData = color
+    returnData = value
     
     return returnData, 201
 

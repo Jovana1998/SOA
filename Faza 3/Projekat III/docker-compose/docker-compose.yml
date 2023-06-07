@@ -462,7 +462,7 @@ services:
     environment:
       - BROKER_ADDRESS=mosquitto-edgex
       - BROKER_TOPIC=edgex-tutorial
-      - DEVICE_ADDRESS=http://edgex-core-command:48082/api/v1/device/name/SOAProjectIII/command/color
+      - DEVICE_ADDRESS=http://edgex-core-command:48082/api/v1/device/name/SOAProjectIII/command/value
 
 networks:
   edgex-network:

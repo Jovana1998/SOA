@@ -34,13 +34,13 @@ def createValueDescriptors():
     url = 'http://%s:48080/api/v1/valuedescriptor' % edgex_ip
 
     payload =   {
-                    "name":"color",
-                    "description":"Color to be shown in test app web UI",
+                    "name":"value",
+                    "description":"Value to be shown in test app web UI",
                     "type":"Str",
-                    "uomLabel":"color",
-                    "defaultValue":"green",
+                    "uomLabel":"value",
+                    "defaultValue":"0",
                     "formatting":"%s",
-                    "labels":["color","soaprojectiii"]
+                    "labels":["value","soaprojectiii"]
                 }
     headers = {'content-type': 'application/json'}
     response = requests.post(url, data=json.dumps(payload), headers=headers, verify=False)
@@ -68,7 +68,7 @@ def createDeviceService():
     payload = {
         "name":"rest-device-service",
         "description":"Gateway for emergency venting system",
-        "labels":["color","soaprojectiii"],
+        "labels":["value","soaprojectiii"],
         "adminState":"unlocked",
         "operatingState":"enabled",
         "addressable": {
@@ -100,7 +100,7 @@ def addNewDevice():
             "name": "SOAProjectIII"
         },
         "labels": [
-            "color",
+            "value",
             "soaprojectiii"
         ],
         "location": "nis",
@@ -108,7 +108,7 @@ def addNewDevice():
             "name": "rest-device-service" 
         },
         "profile": {
-            "name": "colorChanger"
+            "name": "valueChanger"
         }
     }
     headers = {'content-type': 'application/json'}

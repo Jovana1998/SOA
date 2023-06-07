@@ -21,7 +21,7 @@ namespace Monitoring
                 if (topic == null)
                     topic = "edgex-tutorial";
                 if (deviceAddress == null)
-                    deviceAddress = "http://0.0.0.0:48082/api/v1/device/name/SOAProjectIII/command/color";
+                    deviceAddress = "http://0.0.0.0:48082/api/v1/device/name/SOAProjectIII/command/value";
 
                 var mqttClient = mqttFactory.CreateMqttClient();
 
@@ -34,20 +34,18 @@ namespace Monitoring
                     string s = System.Text.Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
                     SensorDataMessage m = JsonConvert.DeserializeObject<SensorDataMessage>(s);
 
-                    string color = "";
+                    string value = "";
                     if (m.Readings?.Count > 0)
-                    // color = Evaluate(m.Readings[0]);
-                    //if (!String.IsNullOrEmpty(color))
-                    //{
                     {
-                        //Console.Write(color + "\t");
+                        value = Evaluate(m.Readings[0]);
+                        Console.Write(value + "\t");
                         HttpClient client = new HttpClient();
-                        color = m.Readings[0].Value +" : "+ m.Readings[0].Name;
+                        //value = m.Readings[0].Value +" : "+ m.Readings[0].Name;
                         HttpResponseMessage rm = client.PutAsync(deviceAddress,
                                 new StringContent(JsonConvert.SerializeObject(
                                     new
                                     {
-                                        color
+                                        value
                                     }),
                                     System.Text.Encoding.UTF8,
                                     "application/json")).Result;
@@ -85,27 +83,36 @@ namespace Monitoring
             {
                 case ("temperature"):
                     int t = Int16.Parse(r.Value);
-                    if (t > 25)
-                        ret = "red";
-                    else if (t < 15)
-                        ret = "lightblue";
+                    if (t < 25)
+                        ret = "off";
+                    else 
+                        ret = "on";
                     break;
                 case ("humidity"):
                     int h = Int16.Parse(r.Value);
                     if (h > 70)
-                        ret = "blue";
-                    else if (h < 50)
-                        ret = "yellow";
+                        ret = "on";
+                    else 
+                        ret = "off";
                     break;
                 case ("ping"):
                     float p = float.Parse(r.Value);
-                    if(p > 20.0)
-                        ret = "black";
+                    if (p > 20.0)
+                        ret = "on";
+                    else
+                        ret = "off";
+                    break;
+                case ("time"):
+                    DateTime time = DateTime.Parse(r.Value);
+                    if (time.Day == DateTime.Now.Day)
+                        ret = "on";
+                    else
+                        ret = "off";
                     break;
                 default:
                     break;
             }
-            return ret;
+            return r.Name +" : "+ret;
         }
     }
 }

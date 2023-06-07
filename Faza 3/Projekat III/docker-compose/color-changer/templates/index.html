@@ -10,7 +10,7 @@
     <center>
 
     <table>
-        <tr><td id="colorChanger" bgcolor="yellow" height=300px width=300px></td></tr>
+        <tr><td id="Changer" height=300px width=300px style="font-size:40px">jovana</td></tr>
     </table>
 
     </center>
@@ -27,9 +27,7 @@
             $.getJSON(
                 $SCRIPT_ROOT+"/_ajaxAutoRefresh", 
                 function(data) {
-                //document.getElementById("colorChanger").style.backgroundColor= data.color;
-				//document.getElementById("colorChanger").style.Text= data.color;
-				document.getElementById("colorChanger").innerHTML= data.color;
+				document.getElementById("Changer").innerHTML= data.value;
 				
                 }
             );
