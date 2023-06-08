@@ -22,7 +22,7 @@
         </li><br/>
         <li>
             Pokrenuti fajl ./device-creation/createRESTDevice.py:<br/>
-            <pre>python createRESTDevice.py -ip 127.0.0.1 -devip color-changer-edgex</pre>
+            <pre>python createRESTDevice.py -ip 127.0.0.1 -devip command-result-edgex</pre>
         </li>
         <li>
             Pozicionirati se u okviru direktorijuma sensor-data-gen<br/>

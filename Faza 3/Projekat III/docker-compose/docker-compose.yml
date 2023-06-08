@@ -440,10 +440,10 @@ services:
       - INFLUXDB_PASSWORD=admin
       - INFLUXDB_DATABASE=sensordata
 
-  color-changer:
-    build: ./color-changer
-    container_name: color-changer-edgex
-    hostname: color-changer-edgex
+  command-result:
+    build: ./command-result
+    container_name: command-result-edgex
+    hostname: command-result-edgex
     networks:
       - edgex-network
     ports:

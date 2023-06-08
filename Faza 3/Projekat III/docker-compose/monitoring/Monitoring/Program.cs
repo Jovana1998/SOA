@@ -21,7 +21,7 @@ namespace Monitoring
                 if (topic == null)
                     topic = "edgex-tutorial";
                 if (deviceAddress == null)
-                    deviceAddress = "http://0.0.0.0:48082/api/v1/device/name/SOAProjectIII/command/value";
+                    deviceAddress = "http://127.0.0.1:48082/api/v1/device/name/SOAProjectIII/command/value";
 
                 var mqttClient = mqttFactory.CreateMqttClient();
 
