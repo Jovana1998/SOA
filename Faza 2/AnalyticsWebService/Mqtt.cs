@@ -1,9 +1,14 @@
-﻿using MQTTnet;
+﻿using Microsoft.Extensions.Options;
+using MQTTnet;
+using MQTTnet.Client;
+using MQTTnet.Server;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
 using System.IO;
+using System.Linq.Expressions;
+using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
@@ -22,11 +27,28 @@ namespace AnalyticsWebService
         {
             try
             {
-                factory = new ConnectionFactory() { HostName = "host.docker.internal", Port = 5673, UserName ="joka", Password="joka"};
-            
-                conn = factory.CreateConnection();
-                channel = conn.CreateModel();
+                var mqttFactory = new MqttFactory();
+                var client = mqttFactory.CreateMqttClient();
+                var mqttClientOptions = new MqttClientOptionsBuilder()
+                  .WithTcpServer("test.mosquitto.org")
+                  .Build();
 
+                client.ApplicationMessageReceivedAsync += e =>
+                {
+                    var data = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+                    Console.WriteLine(data);
+                    //posalji na drugi topic 
+                    return Task.CompletedTask;
+                };
+
+                client.ConnectAsync(mqttClientOptions, CancellationToken.None).Wait();
+
+                var mqttSubscribeOptions = mqttFactory.CreateSubscribeOptionsBuilder()
+                 .WithTopicFilter(f => { f.WithTopic("sensordata"); })
+                 .Build();
+
+                client.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None).Wait();
+                Thread.Sleep(Timeout.Infinite);
             }
             catch (Exception exc)
             {
@@ -76,23 +98,16 @@ namespace AnalyticsWebService
             }
         }
 
-        public void Subscribe(string topic, EventHandler<BasicDeliverEventArgs> callback)
+        public async Task Subscribe(string topic, EventHandler<BasicDeliverEventArgs> callback)
         {
             try
             {
-                //channel.ExchangeDeclare(topic, ExchangeType.Direct);
-                channel.QueueDeclare(queue: topic,
-                                 durable: true,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
-                //channel.QueueBind(topic, topic, topic, null);
-                var consumer = new EventingBasicConsumer(channel);
-                consumer.Received += callback;
-                channel.BasicConsume(queue: topic,
-                                     autoAck: true,
-                                     consumer: consumer);
-
+                var options = new MqttClientOptionsBuilder()
+                    .WithClientId(Guid.NewGuid().ToString())
+                    .WithTcpServer("host.docker.internal", 1883)
+                    .WithCleanSession()
+                    .Build();
+         
                 Console.WriteLine(" Press [enter] to exit.");
             }
             catch (Exception e)

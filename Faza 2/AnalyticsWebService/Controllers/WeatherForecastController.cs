@@ -51,36 +51,11 @@ namespace AnalyticsWebService.Controllers
             string porukaPayload = "Cao Joko";
             var mqttFactory = new MqttFactory();
 
-
-
-            var options = new MqttClientOptionsBuilder()
-                .WithCredentials(string.Empty, string.Empty)
-                .WithTcpServer("172.27.48.1", 1883)
-                .WithCleanSession()
-                .Build();
-
-            IMqttClient client = mqttFactory.CreateMqttClient();
-            var topicFilter = new MqttTopicFilterBuilder()
-              .WithTopic("JokaVida")
-              .Build();
-            var conn1 = client.ConnectAsync(options).Result;
-            var sub = client.SubscribeAsync(topicFilter);
-            if (client.IsConnected)
-            {
-                Console.WriteLine("Konektovano je na topik:" + sub);
-            }
-            var a = "";
-            client.ApplicationMessageReceivedAsync += e =>
-            {
-                Console.WriteLine(e.ApplicationMessage.ConvertPayloadToString());
-                a = e.ApplicationMessage.ConvertPayloadToString();
-                return Task.CompletedTask;
-            };
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = a
+                Summary = ""
             })
             .ToArray();
         }

@@ -1,8 +1,0 @@
-[{
-    "temperature": 25,
-    "humidity": 35
-},
-{
-    "temperature": 29,
-    "humidity": 35
-}]

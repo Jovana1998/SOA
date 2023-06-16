@@ -7,22 +7,15 @@ services:
       context: .
       dockerfile: Dockerfile
 
-  rabbitmq:
-    image: rabbitmq:3.8-management-alpine
-    container_name: 'rabbitmq'
+  mosquitto:
+    image: eclipse-mosquitto
     ports:
-        - 1883:1883
-        - 5673:5672
-        - 15673:15672
-    command: "/bin/bash -c \"rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_web_mqtt rabbitmq_amqp1_0; rabbitmq-server\"" 
+      - "0.0.0.0:1883:1883"
+    container_name: mosquitto
+    hostname: mosquitto
     volumes:
-        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
-    environment:
-      - RABBITMQ_DEFAULT_USER=joka
-      - RABBITMQ_DEFAULT_PASS=joka
-    networks:
-        - rabbitmq_nodejs
+     - "./conf:/mosquitto/config"
+
   sensordata:
     image: sensordataa
 
@@ -30,7 +23,7 @@ services:
     image: lfedge/ekuiper:1.8-alpine
     container_name: ekuiper
     depends_on:
-      - rabbitmq
+      - mosquitto
     user: root
     ports:
       - "9081:9081"
@@ -48,6 +41,3 @@ services:
     environment:
       DEFAULT_EKUIPER_ENDPOINT: host.docker.internal:9081
 
-networks:
-  rabbitmq_nodejs:
-    driver: bridge

@@ -1,42 +1,60 @@
 
 const express = require('express');
-const amqp = require("amqplib")
+var mqtt = require('mqtt');
 const app = express();
 const fs = require('fs');
 
+const readline = require("readline");
+const stream = fs.createReadStream("./data.csv");
+const rl = readline.createInterface({ input: stream });
+let temperatureData = [];
+let humidityData = [];
+let pingData = [];
+let timeData = [];
 
- 
-fs.readFile('./SensorData.txt', 'utf8', (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
- 
-const amqpUrl = 'amqp://joka:joka@host.docker.internal:5673';
+
+var client;
+const exchange = 'sensordata';
+const routingKey = 'sensordata';
+
 (async () => {
-  const connection = await amqp.connect(amqpUrl, 'heartbeat=60');
-  const channel = await connection.createChannel();
- 
-    console.log('Publishing');
-    const exchange = 'sensordata';
-    const queue = 'sensordata';
-    const routingKey = 'sensordata';
-    
-    await channel.assertExchange(exchange, 'direct', {durable: true});
-    await channel.assertQueue(queue, {durable: true});
-    await channel.bindQueue(queue, exchange, routingKey);
-    
-   channel.publish(exchange, routingKey, Buffer.from(JSON.stringify(data)));
-    console.log('Message published');
+  client = mqtt.connect("mqtt://test.mosquitto.org:1883");
+  
 })()
 .
   // Prints "caught woops"
-  catch(error => { console.log('caught', error.message); });;
+  catch(error => { console.log('caught', error.message); });
+
+async function sendData (args) {
+ try{      
+   
+  client.publish("sensordata", temperatureData[args] +" , "+humidityData[args] +" , "+pingData[args] +" , "+timeData[args]);
+  console.log(temperatureData[args] +" , "+humidityData[args] +" , "+pingData[args] +" , "+timeData[args]);
+ 
+
+    console.log('Message published');
+    app.get('/', (req, res) => res.send("Sending data... /n"+data))
+ }
+ catch(ex){
+  console.log(ex);
+ }
+}
 
 
-  app.get('/', (req, res) => res.send("Sending data... /n"+data))
+rl.on("line", async (row) => {
+
+  var list = row.split(",");
+  timeData.push(list[0]);
+  pingData.push(list[1]);
+  temperatureData.push(list[2]);
+  humidityData.push(list[3]);
 });
-
+var i =1;
+setInterval(() => {
+  console.log(i);
+  if(i<1000)
+  sendData(i++);
+ }, 5000);
 
 app.listen(3000,() => console.log("Server ready") )
 
