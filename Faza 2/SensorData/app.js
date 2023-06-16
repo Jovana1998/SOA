@@ -27,9 +27,9 @@ const routingKey = 'sensordata';
 
 async function sendData (args) {
  try{      
-   
-  client.publish("sensordata", temperatureData[args] +" , "+humidityData[args] +" , "+pingData[args] +" , "+timeData[args]);
-  console.log(temperatureData[args] +" , "+humidityData[args] +" , "+pingData[args] +" , "+timeData[args]);
+   var data= "{\"temperature\":"+temperatureData[args]+", \"humidity\":"+humidityData[args]+", \"ping\":"+pingData[args]+", \"time\":"+timeData[args]+"}";
+  client.publish("sensordata", data);
+  console.log(data);
  
 
     console.log('Message published');
