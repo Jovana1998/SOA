@@ -38,6 +38,8 @@ namespace AnalyticsWebService
                     var data = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
                     Console.WriteLine(data);
                     //posalji na drugi topic 
+                   var eq= client.PublishAsync(new MqttApplicationMessage { Payload = e.ApplicationMessage.Payload, Topic = "analytics" });
+                    Console.WriteLine(eq);
                     return Task.CompletedTask;
                 };
 

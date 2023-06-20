@@ -27,7 +27,7 @@ const routingKey = 'sensordata';
 
 async function sendData (args) {
  try{      
-   var data= "{\"temperature\":"+temperatureData[args]+", \"humidity\":"+humidityData[args]+", \"ping\":"+pingData[args]+", \"time\":"+timeData[args]+"}";
+   var data= "{\"temperature\":"+parseFloat(temperatureData[args])+", \"humidity\":"+parseFloat(humidityData[args])+", \"ping\":"+parseFloat(pingData[args])+", \"time\":"+timeData[args]+"\"}";
   client.publish("sensordata", data);
   console.log(data);
  
@@ -43,7 +43,7 @@ async function sendData (args) {
 
 rl.on("line", async (row) => {
 
-  var list = row.split(",");
+  var list = row.split("\",\"");
   timeData.push(list[0]);
   pingData.push(list[1]);
   temperatureData.push(list[2]);

@@ -19,25 +19,13 @@ services:
   sensordata:
     image: sensordataa
 
-  ekuiper:
-    image: lfedge/ekuiper:1.8-alpine
+  kuiper:
+    image: lfedge/ekuiper
     container_name: ekuiper
-    depends_on:
-      - mosquitto
     user: root
     ports:
       - "9081:9081"
-      - "20498:20498"
     environment:
-      - MQTT_SOURCE__DEFAULT__SERVER=host.docker.internal:1883
+      - MQTT_SOURCE__DEFAULT__SERVER=tcp://test.mosquitto.org:1883
 
-  ekuiper_manager:
-    image: emqx/ekuiper-manager:1.8
-    container_name: manager
-    depends_on:
-      - ekuiper
-    ports:
-      - "9082:9082"
-    environment:
-      DEFAULT_EKUIPER_ENDPOINT: host.docker.internal:9081
 
