@@ -4,12 +4,12 @@ const { buildSchema } = require('graphql')
 module.exports = buildSchema(`
 
   type Data {
+    _id: String!
     time_id: String!
     ping_ms: String!
     temperature_c: String!
     humidity_p: String!
   }
-  
   
   input DataInput {
     time_id: String!

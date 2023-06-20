@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 
 
 const dataSchema = new mongoose.Schema({
+    _id: {
+        type: String,
+        required: true
+    },
 
     temperature_c: {
         type: String,
